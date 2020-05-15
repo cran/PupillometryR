@@ -1,9 +1,9 @@
-31659d50c6c19b308a83e3e5f29fae0f *DESCRIPTION
+4f67763b3431ee3a50c3462c9c0592b3 *DESCRIPTION
 b5e10090219575b8a75aff7418c34ff4 *LICENSE
 a694ee639d060474aa18a46098f691f4 *NAMESPACE
 d5a022442da65b83faae7e003a999a6d *R/baseline_data.R
 b1df780a6b880a0a7ef7df1b36605f69 *R/calculate_mean_pupil_size.R
-78887a8d54ecfe667bdc403abafeff6a *R/clean_and_downsample.R
+d881a539e174aa5bc94638193ff2629c *R/clean_and_downsample.R
 51de05e7e27cd44c7de4cb6bdc0126af *R/functional_data.R
 aa169048d112b2eb552d136dede88b7a *R/geom_flat_violin.R
 8bf9137e3f905007d7842b813f8206c0 *R/globals.R
