@@ -1,7 +1,7 @@
 Package: PupillometryR
 Type: Package
 Title: A Unified Pipeline for Pupillometry Data
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
         c(person("Samuel", "Forbes", email = "samuel.h.forbes@gmail.com", role = c("aut", "cre")),
         person("David", "Robinson", email = "admiral.david@gmail.com", role = "ctb"))
@@ -12,13 +12,15 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0), dplyr, ggplot2, rlang
-Imports: data.table, fda, fractal, lazyeval, mgcv, signal, stats,
+Imports: data.table, fda, itsadug, lazyeval, mgcv, signal, stats,
         tidyr, utils, zoo
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2020-05-15 13:52:05 UTC; sam
+Packaged: 2020-06-12 15:13:39 UTC; sam
 Author: Samuel Forbes [aut, cre],
   David Robinson [ctb]
 Maintainer: Samuel Forbes <samuel.h.forbes@gmail.com>
 Repository: CRAN
-Date/Publication: 2020-05-15 14:20:10 UTC
+Date/Publication: 2020-06-13 00:10:03 UTC
