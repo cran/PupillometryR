@@ -8,7 +8,9 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/PupillometryR)](https://CRAN.R-project.org/package=PupillometryR)
 [![Travis build
-status](https://travis-ci.org/samhforbes/PupillometryR.svg?branch=master)](https://travis-ci.org/samhforbes/PupillometryR)
+status](https://app.travis-ci.com/samhforbes/PupillometryR.svg?branch=master)](https://app.travis-ci.com/samhforbes/PupillometryR)
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.02285/status.svg)](https://doi.org/10.21105/joss.02285)
+
 <!-- badges: end -->
 
 The goal of PupillometryR is to to pre-process and then analyze simple
@@ -91,6 +93,9 @@ To follow a detailed walkthrough, run:
 vignette('PupillometryR')
 ```
 
+or head to
+[samforbes.me/PupillometryR](http://samforbes.me/PupillometryR/)
+
 ## Getting help
 
 Please use the issues tab
@@ -99,17 +104,25 @@ or suggestions. For general pupillometry information, I recommend
 [Sylvain’s
 website](https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=314&owa_no_fiche=3&owa_bottin=https://oraprdnt.uqtr.uquebec.ca/pls/public/gscw031?owa_no_site=314&owa_no_fiche=3&owa_bottin=),
 [as well as Jackson and Sirois
-(2009)](http://doi.org/10.1111/j.1467-7687.2008.00805.x). For reading
+(2009)](https://doi.org/10.1111/j.1467-7687.2008.00805.x). For reading
 about using GAMs in pupillometry [this paper by van Rij et al. is
 excellent](https://journals.sagepub.com/doi/10.1177/2331216519832483),
 for general GAMs knowledge I recommend [this tutorial by Michael
 Clark](https://m-clark.github.io/generalized-additive-models/case_for_gam.html)
 as well as the mgcv documentation, and for general FDA information [this
-website is helpful](http://www.psych.mcgill.ca/misc/fda/resources.html),
-along with the Ramsay and Silverman book (1997). Additionally, check out
-the [raincloud plots paper by Allen et
+website is
+helpful](https://www.psych.mcgill.ca/misc/fda/resources.html), along
+with the Ramsay and Silverman book (1997). Additionally, check out the
+[raincloud plots paper by Allen et
 al.](https://wellcomeopenresearch.org/articles/4-63#:~:text=In%20essence%2C%20raincloud%20plots%20combine,error%2C%20such%20as%20a%20boxplot.),
 which is used for some of the in-built plotting in this package.
+
+## Citation
+
+Please cite the JOSS paper for this package if you use it: Forbes, S.
+(2020). PupillometryR: An R package for preparing and analysing
+pupillometry data. Journal of Open Source Software, 5(50), 2285.
+<https://doi.org/10.21105/joss.02285>
 
 ## Acknowledgements
 
@@ -124,12 +137,12 @@ vignette.
 
 \[1\] Jackson, I., & Sirois, S. (2009). Infant cognition: Going full
 factorial with pupil dilation. *Developmental Science*, 12(4), 670-679.
-<http://doi.org/10.1111/j.1467-7687.2008.00805.x>
+<https://doi.org/10.1111/j.1467-7687.2008.00805.x>
 
 \[2\] Allen, M., Poggiali, D., Whitaker, K., Marshall, T. R., & Kievit,
 R. (2019). Raincloud plots: a multi-platform tool for robust data
 visualization. *Wellcome Open Research*, 4, 1-41.
-<http://doi.org/10.12688/wellcomeopenres.15191.1>
+<https://doi.org/10.12688/wellcomeopenres.15191.1>
 
 \[3\] Ramsay, J.O., & Silverman, B.W. (1997). *Functional data
 analysis*. New York: Springer-Verlag.
