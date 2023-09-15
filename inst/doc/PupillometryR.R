@@ -102,7 +102,7 @@ plot(window, pupil = mean_pupil, windows = F, geom = 'boxplot')
 head(window)
 
 ## -----------------------------------------------------------------------------
-t.test(mean_pupil ~ Type, paired = T, data = window)
+with(window, t.test(mean_pupil[Type == 'Easy'], mean_pupil[Type == 'Hard'], paired = T))
 
 ## -----------------------------------------------------------------------------
 timeslots <- create_time_windows(data = base_data,
@@ -143,6 +143,7 @@ qqnorm(resid(m1))
 itsadug::acf_resid(m1)
 
 ## -----------------------------------------------------------------------------
+library(itsadug)
 base_data$Event <- interaction(base_data$ID, base_data$Trial, drop = T)
 
 model_data <- base_data
