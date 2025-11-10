@@ -252,8 +252,11 @@ regress_data <- function(data, pupil1, pupil2) {
 
   regdata <- data
 
-  #make functions
-  .predict_right = function(x, y){
+  # make helper functions
+  .predict_right <- function(x, y) {
+    if (all(is.na(x)) || all(is.na(y))) {
+      return(rep(NA, length(x)))
+    }
     pupilz <- predict(lm(x ~ y, na.action = na.exclude))
     return(pupilz)
   }
@@ -288,7 +291,9 @@ regress_data <- function(data, pupil1, pupil2) {
 #' @param data a PupillometryR dataframe
 #' @param pupil Column name for pupil data to be interpolated
 #' @param type string indicating linear or cubic interpolation to be performed.
-#'
+#' @param maxgap numeric value specifying the maximum gap size (number of consecutive NAs) to interpolate. 
+#'        Default is Inf (interpolates gaps of any length).
+#' 
 #' @examples
 #' Sdata <- make_pupillometryr_data(data = pupil_data,
 #' subject = ID,
@@ -310,7 +315,7 @@ regress_data <- function(data, pupil1, pupil2) {
 #' @export
 #' @return interpolated pupillometry data
 
-interpolate_data <- function(data, pupil, type = c('linear', 'cubic')){
+interpolate_data <- function(data, pupil, type = c('linear', 'cubic'), maxgap = Inf){
 
   pupil <- deparse(substitute(pupil))
   if('PupillometryR' %in% class(data) == FALSE){
@@ -328,11 +333,11 @@ interpolate_data <- function(data, pupil, type = c('linear', 'cubic')){
 
   #make functions
   .spline <- function(x){
-    x <- zoo::na.spline(x, na.rm = F)
+    x <- zoo::na.spline(x, na.rm = F, maxgap = maxgap)
     return(x)
   }
   .approx <- function(x){
-    x <- zoo::na.approx(x, na.rm = F, rule = 2)
+    x <- zoo::na.approx(x, na.rm = F, rule = 2, maxgap = maxgap)
     return(x)
   }
   #interpolate
