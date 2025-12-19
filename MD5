@@ -1,4 +1,4 @@
-0c54221d34dbd6412c4621e83603a0f5 *DESCRIPTION
+58dea30f367f4b966b5c2bb70be6c325 *DESCRIPTION
 29736013e465700d3434e5da08c7a708 *LICENSE
 c1abe611ff119816ffdccd279658e2d6 *NAMESPACE
 1fb995dba5d0669174c54bc33579a315 *NEWS.md
@@ -14,13 +14,13 @@ a46e4e19cec95b7b67b327b5350b9b2e *R/make_pupillometryR_data.R
 72e915d998e6b386fe20d88241a3d5fe *R/plot_pupil_data.R
 857569c3a634b08f9dd1f87738f9ea5d *R/pupil_data.R
 4fced5d1ade297d495442d2f884d1418 *R/subset_data.R
-b89bfa90e5878b7f0685d43dc9a46b8b *README.md
+0abcc89801279b1edd8c56450d5b2a79 *README.md
 3a043a5356f45f76e35ba5173aa3063f *build/vignette.rds
 b626043dbc161bb0018eb68f65f39e61 *data/pupil_data.RData
 589148e90be1d62b667830c1e9a4f68a *inst/CITATION
-4fda46b16345db5f931d6a26f2e29dd4 *inst/doc/PupillometryR.R
-7ae34f60ba4e078f30324da2294ce8b4 *inst/doc/PupillometryR.Rmd
-a233d7c758b5a234cdeeb5d3a52646e1 *inst/doc/PupillometryR.html
+9dab50f7bc1f0e771c24adccfc249f91 *inst/doc/PupillometryR.R
+02793ec291143392ac009e4a78faddfb *inst/doc/PupillometryR.Rmd
+9fc8c815882081b1614cfa17f4be24ab *inst/doc/PupillometryR.html
 0f00c80f4790e39a3e0a7df96c864466 *man/GeomFlatViolin.Rd
 787ca2307ed89104a1450c26e65c030f *man/baseline_data.Rd
 a40e0fd302fba1c420b5f67c4fd9bfdb *man/calculate_mean_pupil_size.Rd
@@ -50,4 +50,4 @@ a360a72a6f5bdfef7b1ac679ea82aa79 *man/regress_data.Rd
 25678936abb85d0bf70bf198875f13f9 *man/replace_missing_data.Rd
 79fef5c538d41c4fe0c81f9905d4ae68 *man/run_functional_t_test.Rd
 9bca068160d04408497f60cf33a4cf28 *man/subset_data.Rd
-7ae34f60ba4e078f30324da2294ce8b4 *vignettes/PupillometryR.Rmd
+02793ec291143392ac009e4a78faddfb *vignettes/PupillometryR.Rmd

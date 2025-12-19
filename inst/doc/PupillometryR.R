@@ -140,28 +140,28 @@ plot(base_data, pupil = mean_pupil, group = 'condition', model = m1)
 ## -----------------------------------------------------------------------------
 qqnorm(resid(m1))
 
-itsadug::acf_resid(m1)
+# itsadug::acf_resid(m1)
 
 ## -----------------------------------------------------------------------------
-library(itsadug)
-base_data$Event <- interaction(base_data$ID, base_data$Trial, drop = T)
-
-model_data <- base_data
-model_data <- itsadug::start_event(model_data,
-                          column = 'Time', event = 'Event')
-
-model_data <- droplevels(model_data[order(model_data$ID,
-                                          model_data$Trial,
-                                          model_data$Time),])
+# library(itsadug)
+# base_data$Event <- interaction(base_data$ID, base_data$Trial, drop = T)
+# 
+# model_data <- base_data
+# model_data <- itsadug::start_event(model_data,
+#                           column = 'Time', event = 'Event')
+# 
+# model_data <- droplevels(model_data[order(model_data$ID,
+#                                           model_data$Trial,
+#                                           model_data$Time),])
 
 ## -----------------------------------------------------------------------------
-m2 <- bam(mean_pupil ~ Typen +
-            s(Time,  by = Typen) +
-            s(Time, Event, bs = 'fs', m = 1),
-          data = base_data,
-          family = gaussian,
-          discrete = T,
-          AR.start = model_data$start.event, rho = .6)
+# m2 <- bam(mean_pupil ~ Typen +
+#             s(Time,  by = Typen) +
+#             s(Time, Event, bs = 'fs', m = 1),
+#           data = base_data,
+#           family = gaussian,
+#           discrete = T,
+#           AR.start = model_data$start.event, rho = .6)
 
 # m2 <- bam(mean_pupil ~ 
           #   s(Time,  by = Typen) +
@@ -171,10 +171,10 @@ m2 <- bam(mean_pupil ~ Typen +
           # discrete = T,
           # AR.start = model_data$start.event, rho = .6)
 
-summary(m2)
-qqnorm(resid(m2))
-itsadug::acf_resid(m2)
-plot(base_data, pupil = mean_pupil, group = 'condition', model = m2)
+# summary(m2)
+# qqnorm(resid(m2))
+# itsadug::acf_resid(m2)
+# plot(base_data, pupil = mean_pupil, group = 'condition', model = m2)
 
 ## -----------------------------------------------------------------------------
 differences <- create_difference_data(data = base_data,
